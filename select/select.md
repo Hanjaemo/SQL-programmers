@@ -1,13 +1,13 @@
 ## 3월에 태어난 여성 회원 목록 출력하기
 ```sql
-SELECT member_id, member_name, gender, date_format(date_of_birth, '%Y-%m-%d')
+select member_id, member_name, gender, date_format(date_of_birth, '%Y-%m-%d')
 from member_profile
 where month(date_of_birth) = 3 and gender = 'W' and tlno is not null 
 order by member_id
 ```
 ## 과일로 만든 아이스크림 고르기
 ```sql
-SELECT f.flavor
+select f.flavor
 from first_half f, icecream_info i
 where f.flavor = i.flavor and f.total_order > 3000 and i.ingredient_type = 'fruit_based'
 order by f.total_order desc

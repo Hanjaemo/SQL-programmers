@@ -28,7 +28,9 @@ order by hire_ymd desc, dr_name asc
 ```
 ## 평균 일일 대여 요금 구하기
 ```sql
-
+select round(avg(daily_fee), 0) as average_fee
+from car_rental_company_car
+where car_type = 'SUV'
 ```
 ## 인기있는 아이스크림
 ```sql

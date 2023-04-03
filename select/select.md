@@ -34,7 +34,9 @@ where car_type = 'SUV'
 ```
 ## 인기있는 아이스크림
 ```sql
-
+select flavor
+from first_half
+order by total_order desc, shipment_id asc
 ```
 ## 서울에 위치한 식당 목록 출력하기
 ```sql

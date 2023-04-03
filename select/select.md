@@ -58,11 +58,16 @@ order by published_date asc
 ```
 ## 강원도에 위치한 생산공장 목록 출력하기
 ```sql
-
+select factory_id, factory_name, address
+from food_factory
+where address like '%강원도%'
+order by factory_id asc
 ```
 ## 모든 레코드 조회하기
 ```sql
-
+select *
+from ANIMAL_INS
+order by ANIMAL_ID
 ```
 ## 재구매가 일어난 상품과 회원 리스트 구하기
 ```sql

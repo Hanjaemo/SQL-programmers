@@ -40,7 +40,9 @@ order by total_order desc, shipment_id asc
 ```
 ## 서울에 위치한 식당 목록 출력하기
 ```sql
-
+select *
+from ANIMAL_INS
+order by ANIMAL_ID
 ```
 ## 조건에 부합하는 중고거래 댓글 조회하기
 ```sql

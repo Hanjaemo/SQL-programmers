@@ -79,15 +79,23 @@ order by ANIMAL_ID
 ```
 ## 역순 정렬하기
 ```sql
-
+select name, datetime
+from animal_ins
+order by animal_id desc
 ```
 ## 아픈 동물 찾기
 ```sql
-
+select animal_id, name
+from animal_ins
+where intake_condition = 'Sick'
+order by animal_id asc
 ```
 ## 어린 동물 찾기
 ```sql
-
+select animal_id, name
+from animal_ins
+where intake_condition != 'Aged'
+order by animal_id asc
 ```
 ## 동물의 아이디와 이름
 ```sql

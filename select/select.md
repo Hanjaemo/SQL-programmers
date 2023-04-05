@@ -99,17 +99,26 @@ order by animal_id asc
 ```
 ## 동물의 아이디와 이름
 ```sql
-
+select animal_id, name
+from animal_ins
+order by animal_id asc
 ```
 ## 여러 기준으로 정렬하기
 ```sql
-
+select animal_id, name, datetime
+from animal_ins
+order by name, datetime desc
 ```
 ## 상위 n개 레코드
 ```sql
-
+select name
+from animal_ins
+order by datetime asc
+limit 1
 ```
 ## 조건에 맞는 회원수 구하기
 ```sql
-
+select count(*)
+from user_info
+where year(joined) = 2021 and age between 20 and 29
 ```

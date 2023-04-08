@@ -18,6 +18,8 @@ from animal_ins
 ```
 ## 동물 수 구하기
 ```sql
+select count(*) as count
+from animal_ins
 ```
 ## 중복 제거하기
 ```sql

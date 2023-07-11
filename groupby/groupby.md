@@ -47,6 +47,10 @@ order by name
 ```
 ## 입양 시각 구하기(1)
 ```sql
+select hour(datetime) as hour , count(1) as count
+from animal_outs
+group by 1 having hour between 9 and 20
+order by 1
 ```
 ## 입양 시각 구하기(2)
 ```sql

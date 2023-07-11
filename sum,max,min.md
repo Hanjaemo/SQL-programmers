@@ -23,4 +23,6 @@ from animal_ins
 ```
 ## 중복 제거하기
 ```sql
+select count(distinct name) as count
+from animal_ins
 ```

@@ -30,15 +30,17 @@
 ```
 ## 고양이와 개는 몇 마리 있을까
 ```sql
-select
-    animal_type,
-    count(animal_type)
+select animal_type, count(animal_type)
 from animal_ins
 group by animal_type
 order by animal_type
 ```
 ## 동명 동물 수 찾기
 ```sql
+select name, count(name)
+from animal_ins
+group by name having count(name) >= 2
+order by name
 ```
 ## 년, 월, 성별 별 상품 구매 회원 수 구하기
 ```sql

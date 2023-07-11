@@ -30,6 +30,12 @@
 ```
 ## 고양이와 개는 몇 마리 있을까
 ```sql
+select
+    animal_type,
+    count(animal_type)
+from animal_ins
+group by animal_type
+order by animal_type
 ```
 ## 동명 동물 수 찾기
 ```sql

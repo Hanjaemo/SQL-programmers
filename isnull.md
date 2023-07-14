@@ -7,12 +7,23 @@ ORDER BY warehouse_id
 ```
 ## 이름이 없는 동물의 아이디
 ```sql
+select animal_id
+from animal_ins 
+where name is null
+order by 1;
 ```
 ## 이름이 있는 동물의 아이디
 ```sql
+select animal_id
+from animal_ins 
+where name is not null
+order by 1;
 ```
 ## NULL 처리하기
 ```sql
+select animal_type, ifnull(name, "No name"), sex_upon_intake
+from animal_ins 
+order by animal_id;
 ```
 ## 나이 정보가 없는 회원 수 구하기
 ```sql

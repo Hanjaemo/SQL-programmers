@@ -30,12 +30,22 @@
 ```
 ## 루시와 엘라 찾기
 ```sql
+select animal_id, name, sex_upon_intake
+from animal_ins
+where name in ('Lucy', 'Ella', 'Pickle', 'Rogan', 'Sabrina', 'Mitty')
 ```
 ## 이름에 el이 들어가는 동물 찾기
 ```sql
+select animal_id, name
+from animal_ins
+where name like '%el%' and animal_type = 'Dog'
+order by name
 ```
 ## 중성화 여부 파악하기
 ```sql
+select animal_id, name, if (sex_upon_intake like '%Neutered%' or sex_upon_intake like '%Spayed%', 'O', 'X')
+from animal_ins
+order by animal_id
 ```
 ## 오랜 기간 보호한 동물(2)
 ```sql

@@ -19,12 +19,25 @@ order by b.published_date
 ```
 ## 없어진 기록 찾기
 ```sql
+select o.animal_id, o.name
+from animal_outs o left join animal_ins i on o.animal_id = i.animal_id
+where i.animal_id is null
+order by o.animal_id
 ```
 ## 있었는데요 없었습니다
 ```sql
+select o.animal_id, o.name
+from animal_outs o join animal_ins i on o.animal_id = i.animal_id
+where o.datetime < i.datetime
+order by i.datetime
 ```
 ## 오랜 기간 보호한 동물(1)
 ```sql
+select i.name, i.datetime
+from animal_ins i left join animal_outs o on i.animal_id = o.animal_id
+where o.animal_id is null
+order by i.datetime
+limit 3
 ```
 ## 보호소에서 중성화한 동물
 ```sql
